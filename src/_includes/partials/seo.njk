@@ -1,0 +1,49 @@
+{%- set siteName = site.name or site.title -%}
+{%- set pageTitle = seo.title or title or site.title -%}
+{%- set metaTitle = pageTitle if pageTitle == siteName else pageTitle + " | " + siteName -%}
+{%- set metaDescription = seo.description or description or site.description -%}
+{%- set canonicalHref = (canonical or page.url) | canonicalUrl(site.url) -%}
+{%- set socialImage = (seo.image or image or site.defaultImage) | absoluteUrl(site.url) -%}
+{%- set pageType = ogType or seo.type or "website" -%}
+
+<title>{{ metaTitle }}</title>
+{%- if metaDescription %}
+<meta name="description" content="{{ metaDescription }}">
+{%- endif %}
+{%- if site.author %}
+<meta name="author" content="{{ site.author }}">
+{%- endif %}
+{%- if canonicalHref %}
+<link rel="canonical" href="{{ canonicalHref }}">
+{%- endif %}
+
+<meta property="og:site_name" content="{{ siteName }}">
+<meta property="og:title" content="{{ pageTitle }}">
+{%- if metaDescription %}
+<meta property="og:description" content="{{ metaDescription }}">
+{%- endif %}
+{%- if canonicalHref %}
+<meta property="og:url" content="{{ canonicalHref }}">
+{%- endif %}
+<meta property="og:type" content="{{ pageType }}">
+<meta property="og:locale" content="{{ site.locale }}">
+{%- if socialImage %}
+<meta property="og:image" content="{{ socialImage }}">
+{%- endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle }}">
+{%- if metaDescription %}
+<meta name="twitter:description" content="{{ metaDescription }}">
+{%- endif %}
+{%- if socialImage %}
+<meta name="twitter:image" content="{{ socialImage }}">
+{%- endif %}
+
+{%- if noindex or seo.noindex or not site.isProduction %}
+<meta name="robots" content="noindex,nofollow">
+{%- endif %}
+
+{%- if schema %}
+<script type="application/ld+json">{{ schema | dump | safe }}</script>
+{%- endif %}

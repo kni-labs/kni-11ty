@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.language or 'en' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ title or "KNI-11ty" }}</title>
+  {% include "partials/seo.njk" %}
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
