@@ -10,8 +10,8 @@
     "eleventy:serve": "eleventy --serve",
     "build": "npm run css:build && eleventy",
     "start": "npm-run-all --parallel css:watch eleventy:serve",
-    "css:build": "sass src/styles:dist/styles --no-source-map && postcss dist/styles/*.css --dir dist/styles",
-    "css:watch": "sass --watch src/styles:dist/styles --no-source-map",
+    "css:build": "sass src/styles:dist/assets/css --no-source-map && postcss dist/assets/css/*.css --dir dist/assets/css",
+    "css:watch": "sass --watch src/styles:dist/assets/css --no-source-map",
     "postinstall": "node ./scripts/kni-cascade-postinstall.js",
     "lint:css": "stylelint 'src/**/*.(css|scss)' || true",
     "format:css": "prettier --write 'src/**/*.(css|scss)' || true"
