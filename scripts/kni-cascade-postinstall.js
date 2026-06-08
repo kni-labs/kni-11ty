@@ -6,7 +6,7 @@ const readline = require('readline');
 
 // Use process.cwd() so script works regardless of its own location
 const ROOT = process.cwd();
-const SCSS_ROOT = path.join(ROOT, 'src', 'styles');
+const SCSS_ROOT = path.join(ROOT, 'src', 'assets', 'css');
 const STYLELINT_TARGET = path.join(ROOT, '.stylelintrc.cjs');
 const PKG_PATH = path.join(ROOT, 'package.json');
 const README_PATH = path.join(ROOT, 'README.md');
