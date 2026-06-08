@@ -1,5 +1,5 @@
 {
-  "name": "ls-la-src-echo-src-styles-ls-la-src-styles-true-echo-postcss-config-js-sed-n-1-200p-postcss-config-js-echo-no-postcss-config-js",
+  "name": "kni-11ty",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -16,7 +16,7 @@
     "lint:css": "stylelint 'src/**/*.(css|scss)' || true",
     "format:css": "prettier --write 'src/**/*.(css|scss)' || true"
   },
-  "packageManager": "pnpm@8",
+  "packageManager": "pnpm@10",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "autoprefixer": "^10.4.0",
@@ -28,8 +28,5 @@
     "sass": "^1.66.0",
     "stylelint": "^14.16.0"
   },
-  "description": "pkill -f kni-cascade-postinstall.js || true && rm -rf node_modules pnpm-lock.yaml && CI=true pnpm install",
-  "kni": {
-    "projectName": "Ls La Src && Echo ' Src/styles ' && Ls La Src/styles || True && Echo ' Postcss.config.js ' && Sed N '1,200p' Postcss.config.js || Echo 'no Postcss.config.js'"
-  }
+  "description": "An 11ty starter scaffold using the kni-cascade CSS foundation.",
 }
