@@ -3,6 +3,8 @@ __PROJECT_NAME__
 
 __PROJECT_DESCRIPTION__
 
+Requires Node: >=18
+
 Quick start
 -----------
 
