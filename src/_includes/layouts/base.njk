@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ title or "KNI-11ty" }}</title>
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
   {% include "components/header.njk" %}
@@ -12,5 +12,6 @@
     {{ content | safe }}
   </main>
   {% include "components/footer.njk" %}
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
