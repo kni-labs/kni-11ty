@@ -1,9 +1,11 @@
 module.exports = function(eleventyConfig) {
   // Keep source assets copied into the output folder. We no longer passthrough
   // `dist/assets` because Eleventy will write its output directly to `dist`.
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addWatchTarget("src/assets/css");
+  eleventyConfig.addWatchTarget("src/assets/js");
   eleventyConfig.addWatchTarget("dist/assets/css");
 
   eleventyConfig.addFilter("absoluteUrl", function(url, base) {
