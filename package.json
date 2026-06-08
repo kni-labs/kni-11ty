@@ -28,5 +28,5 @@
     "sass": "^1.66.0",
     "stylelint": "^14.16.0"
   },
-  "description": "An 11ty starter scaffold using the kni-cascade CSS foundation.",
+  "description": "An 11ty starter scaffold using the kni-cascade CSS foundation."
 }
