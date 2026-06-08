@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title or "KNI-11ty" }}</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  {% include "components/header.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include "components/footer.njk" %}
+</body>
+</html>
