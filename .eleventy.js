@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({"dist/assets": "assets"});
+  // Keep source assets copied into the output folder. We no longer passthrough
+  // `dist/assets` because Eleventy will write its output directly to `dist`.
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addWatchTarget("src/assets/css");
   eleventyConfig.addWatchTarget("dist/assets/css");
@@ -10,7 +11,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_includes/layouts",
       data: "_data",
-      output: "_site"
+      output: "dist"
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
