@@ -18,7 +18,7 @@
     "lint:css": "stylelint 'src/**/*.(css|scss)' || true",
     "format:css": "prettier --write 'src/**/*.(css|scss)' || true"
   },
-  "packageManager": "pnpm@10",
+  "packageManager": "pnpm@10.0.0",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "autoprefixer": "^10.4.0",
